@@ -1,0 +1,58 @@
+<!doctype html>
+
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Maquetacion en Bootstrap</title>
+        <meta name="description" content="Testing web">
+        <meta name="author" content="adc">
+        
+        <!--Hacer que la pagina web se vea en varios dispositivos-->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+        <link rel="stylesheet" type="text/css" href="../bootstrap/bootstrap.min">     
+
+        <!--Revisar hoja de estilos para esta web:-->
+        <link rel="stylesheet" type="text/css" href="../css/columnas.css">       
+  
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="row">
+                <!--Container permite 12 columnas, si pongo col-6 ocupara la mitad del container-->
+                <div class="col-6 red">
+                </div>
+            </div>
+
+            <div class="row">
+                <!--sm tendra sentido cuando el ancho sea menor a 576px.
+                Con sm-6 se mostrara media pantalla, y cuando el ancho 
+                sea menor ocupara todo su espacio disponible-->
+                <div class="col-sm-6 col-md-4 col-lg-2 yellow">
+
+                </div>
+            </div>
+
+            <div class="row">
+                <!--Ocupara la mitad del contenedor-->
+                <div class="col-md-6 blue">
+                </div>
+
+                <!--Ocupara la tercera parte del contenedor-->
+                <div class="col-md-4 yellow">
+                </div>
+
+                <!--Ocupara la sexta parte del contenedor-->
+                <div class="col-md-2 red">
+                </div>
+            </div>
+        </div>
+
+        <!--Scripts para JQuery o Javascript para que funcionen correctamente los componentes de bootstrap -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    </body>
+</html>

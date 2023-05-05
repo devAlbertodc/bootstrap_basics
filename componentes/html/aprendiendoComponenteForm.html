@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title> Pagina principal</title>
+	<!--Etiquetas meta:--->
+	<meta name="author content="Alberto Dasi">
+	<meta name="description" content="Aprendiendo bootstrap">
+	<meta charset="utf-8"> <!--Indicamos el lenguaje que se usa.-->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!--Hacemos que el ancho de la web sea para que ocupe todo el ancho del dispositivo.-->
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+</head>
+<body>
+
+	<!--Para la realizacion de formularios:
+		Hay una etiqueta padre que se llama FORM y puede tener multiples hijos.Los hijos de FORM se llaman:
+			DIV .form-group: permite usar label, inputs,textarea y select.
+			DIV. form-check: permite usar checkbox, radio(button??) y label
+			DIV .form-group: tambien permite usar label y File
+			Para cambiar el tamanyo del control que quiera tengo que usar la clase form-control sm o lg
+			Para hacer que un campo sea obligatorio hay que usar required, y entonces cuando le des a registrar, aparecera el mensaje de completar ese campo
+			-->
+	<div class="container">
+		<h1> Formulario de Registro </h1>
+		<div class="row">
+			<div class="col-md-6 justify-content-center">
+				<form >
+				<div class="form-group">
+					<label class="col-form-label-sm">Usuario</label>
+					<!--Placeholder sirve para hacer como una marca de agua, sin que el usuario tenga que hacer un tooltip-->
+					<input type="text" class="form-control form-control-sm" placeholder="Nombre de usuario">
+					<div class="valid-feedback">
+						Texto correcto
+					</div>
+
+					<div class="invalid-feedback">
+						Texto incorrecto 
+					</div>
+				</div>
+
+				<div class="form-group">
+					<!--Si quiero que el texto aparente ser mas grando tengo que usar la clase col-form-label-lg en el elemento label-->
+					<label class="col-form-label-lg">E-Mail</label>
+
+					<!--Si quiero que el componente para insertar contenido sea mas grande tengo que usar la clase: form-control form-control-lg-->
+					<input type="email" class="form-control form-control-lg" required>
+				</div>
+
+				<div class="form-group">
+					<label>Contrasenya</label>
+					<input type="password" class="form-control">
+				</div>
+
+<!--Para que de un  grupo de opciones solo pueda seleccionar una, tienen que tener el mismo name-->
+				<div class="form-check form-check-inline">
+					<input type="radio" name="genero" class="form-check-input" value="h">
+					<label class="form-check-label">Hombre</label>
+				</div>
+
+				<div class="form-check form-check-inline">
+					<input type="radio" name="genero" class="form-check-input" value="m">
+					<label class="form-check-label">Mujer</label>
+				</div>
+				
+				<div class="form-group">
+					<label>Seleccionar la foto de perfil: </label>
+					<input type="file" class="form-control-file">
+				</div>
+				
+				<div class="text-right">
+					<input type="submit" value="Registrar" class="btn btn-primary">
+				</div>
+			</form>
+			</div>
+		</div>
+	</div>
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

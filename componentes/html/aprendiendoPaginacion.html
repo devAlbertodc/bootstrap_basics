@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title> Pagina principal</title>
+	<!--Etiquetas meta:--->
+	<meta name="author content="Alberto Dasi">
+	<meta name="description" content="Aprendiendo bootstrap">
+	<meta charset="utf-8"> <!--Indicamos el lenguaje que se usa.-->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!--Hacemos que el ancho de la web sea para que ocupe todo el ancho del dispositivo.-->
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+</head>
+<body>
+	<!--Paginacion sirve para que el usuario sepa en que parte de la web se ubica.-->
+	<div class="d-flex container mt-5 justify-content-center">
+      <nav>
+      	<!--Tenemos un div que abarca a todos los elementos div hijos.
+      		En este elemento se puede ampliar la vista.
+      		pagination-sm: hara que se vea mas reducido.
+      		pagination-lg: hara que se vea mas ampliado.-->
+        <div class="pagination">
+        	<!--Cada div hijo es un item que tiene un enlace por si guia a otra web-->
+          <div class="page-item">
+            <a class="page-link" href="#">Anterior</a>
+          </div>
+          <div class="page-item">
+            <a class="page-link" href="#">1</a>
+          </div>
+          <div class="page-item active">
+            <a class="page-link" href="#">2</a>
+          </div>
+          <div class="page-item">
+            <a class="page-link" href="#">3</a>
+          </div>
+          <!--Hacemos que un item n se pueda cliquear con la clase disabled.-->
+          <div class="page-item disabled">
+            <a class="page-link" href="#">4</a>
+          </div>
+          <div class="page-item">
+            <a class="page-link" href="#">Siguiente</a>
+          </div>
+        </div>
+      </nav>
+</div>	
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

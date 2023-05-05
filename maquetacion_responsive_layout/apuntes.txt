@@ -1,0 +1,155 @@
+DISEÑO RESPONSIVE:
+    Responsivo: aproximacion al diseño web que hace que las paginas se 
+    vean de forma diferente dependiendo del tamaño del dispositivo y el ancho de la pantalla.
+
+    El contenido de la pagina web cambiará de forma que segun las dimensiones del navegador se verá la pagina web.
+    No importa la orientacion de la pantalla ni la densidad de los colores.
+    Televisiones, moviles, tabletas, ebooks y personas. 
+
+    Viewport: area visible de la pagina web, cambiando segun con dispositivo.
+    Viewport y ancho de la pantalla no es lo mismo.
+    Viewport es el tamaño del navegador
+
+    Breakpoint: punto donde cambian las propiedades de la pagina.
+    Media Query: estilos css que se aplica segun condiciones relativas al tamaño/resolucion del dispositivo
+
+    Para diseño responsivo agregar esta linea:
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    Breakpoint: definir en que anchura se van a producir los cambios.
+
+    Media query: reglas que permite cambiar los sentidos de la pagina web segun altura y anchura.
+    Se aplica siempre la mas restrictiva.
+
+¿PORQUE USAR BOOTSTRAP?
+    -Facil de instalar,usar y muy bien documentado.
+    -Usado en millones de web y muy importante.
+    -Mantenido, continua mejora y corrección de errores.
+    -Todo igual, es decir, quedara igual que el resto de paginas que usan bootstrap, aunque esto tiene solución.
+
+NOVEDADES DE BOOTSTRAP 4:
+    -Usa flex, todo bootstrap esta basado en el uso de componentes CSS flex.
+    -Usa SSAS, que antiguamente se usaba el preprocesador CSS.
+    -Usa REM, en vez de em como unidad de medida para el tamaño de la fuente. Facilita mantenimiento.
+
+    -No soporta IE8, no Glyphyicons.
+    -utilizades de margenes y padding
+    -Nueva paleta de colores y menos gradientes
+
+    -NUEVOS COMPONENTES:
+        -Cards
+        -Carrousel
+        -Modales
+        -PopOver
+        -Tooltip
+
+INSTALAR BOOTSTRAP:
+    -Usar enlaces de la documentación.
+    -Descargar los ficheros para no tener que pedirlos cada vez que se muestre nuestra pagina.
+
+CONTENEDOR:
+    Etiqueta que contiene el resto de nuestra pagina web. 
+    Container normal: deja unos margenes al lado izquierdo y derecho.
+    Container-fluid: ocupa toda la pagina y su ancho, sin importar el ancho.
+
+GRID BOOTSTRAP: LAS 12 COLUMNAS:
+    -Siempre se usará un contenedor principal, salvo excepciones donde se usaran 2 contendores.
+    -Estructura del contenedor en este video!!!
+    Body
+        clase Container o Container fluid
+            Clase Row
+                Clase col*
+    No se pueden tener mas de 12 elementos en una fila.
+
+BREAKPOINT:
+    -Punto en el que decido que el diseño de mi web cambia, segun ancho y alto.
+        -576px
+        -768px
+        -992px
+        -1200px
+    -Se pueden diferenciar 5 tipos de pantalla:
+        -Pantalla extra pequeña: entre 0 y 576px
+        -Pantalla pequeña: entre 576 y 768px.
+        -Pantalla mediana: entre 768 y 992px.
+        -Pantalla grande: entre 993 y 1200px.
+        -Pantalla extra grande: a partir de 1200px.
+
+SALTO DE FILA EN EL GRID:
+    <div class="w-100"></div>
+
+GUTTER:
+    -Por defecto mete un padding a la izquierda o la derecha, esto es el gutter
+    <div class="row no-gutters">
+
+ALINEAR LAS FILAS VERTICALMENTE:
+    Los elementos de la fila se alinearán verticalemente con el borde superior de la fila: align-items-start
+    Los elementos de la fila se alinearán centrados verticalmente: align-items-center
+    Los elementos de la fila se alinearán verticalmente con el borde inferior de la fila: align-items-end
+
+ALINEAR LAS FILAS HORIZONTALMENTE:
+    Los elementos empezarán en la parte izquierda y ocuparán el tamaño horizontal establecido. Es la opción por defecto: justify-content-start
+    Los elementos de la fila se centrarán horizontalmente. justify-content-center
+    Los elementos de la fila se alinearán al final (la derecha normalmente) de la fila.  justify-content-end
+    El espacio restante se distribuirá de manera equitativa alrededor de los elementos empezando y acabando con espacios libres. justify-content-around
+    El espacio restante se distribuirá de manera equitativa entre los distintos elementos estando uno de ellos totalmente a la derecha y
+    otro totalmente a la izquierda. justify-content-between
+
+ORDENANDO COLUMNAS:
+    Ordenar columnas de forma artificial.
+    -La clase que hay que usar es order-X donde X es la posicion donde quieres que salga.
+    -Si a 3 elementos al segundo elemento no le pones order-2 aparecera por defecto a la izquierda.
+    order-md-3 se puede aplicar para que cuando la pantalla sea mayor que md se puede cambiar el orden
+
+MARGENES ENTRE COLUMNAS:
+    -Se debe agregar mt, mb, ml, o mr 
+    mt-md-X donde X puede ir de 1 a 5 y md es la resolucion deseada
+    pt, pb,pl o pr para el padding
+
+ELEMENTOS DE TEXTO:
+    -Tipos de fuente propio. Ejemplo h1 y p.
+    -Clases para modificar aspectos de la web. 
+    -Clase .h1 y displayX de 1 a 5
+    -List-unstyled para quitarle viñetas. Y list-inline
+    -Alinear elementos: text-center, left y right.
+    -Blockquote,mark,small...
+
+    -Usando p class="h1" es como si hiciese <h1> pero mas grande que el h1.
+
+    Lista:
+        ul clase list-inline
+         li clase list-inline-item
+
+    -los elementos de texto no son responsive. Hay que gestionarlo mediante media-Query.
+
+IMAGENES Y FIGURAS:
+    -Imagenes -> Img
+    -Figuras-> Figures
+
+    clase img-fluid para que la imagen ocupe las columnas del padre, que suele ser el div, respetando las dimensiones.
+    figure clase figure 
+        imagen dentro de figure: figure-img img-fluid para responsiva 
+        figcaption clase figure-caption
+    cierra figure
+
+TABLAS:
+    -Clases:
+        Table.
+        Table-stripped alterna colores de las celdas pares.
+        Table-hover: destaca la celda cuando coloco el cursor encima
+        Table-bordered: para ponerle bordes a las tablas.
+    -Estilo a la cabecera de la tabla: clase thead-light o thead-dark. 
+        Solo se aplican los estilos si dentro de la cabecera se usan th.
+    -Para que la tabla sea responsive hay que crear un div con la clase table-responsive y meter los componentes.
+    
+    -Orden:
+    Div table responsive. -sm o -md o -lg o -xl
+        tabla
+            caption
+            thead
+                tr
+                    th
+
+FORMULARIOS:
+    -Requieren la etiqueta form.
+        -Input de cualquier tipo menos file. Div form-group.
+        -checkbox y radio. Div form-check label.

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title> Pagina principal</title>
+	<!--Etiquetas meta:--->
+	<meta name="author content="Alberto Dasi">
+	<meta name="description" content="Aprendiendo bootstrap">
+	<meta charset="utf-8"> <!--Indicamos el lenguaje que se usa.-->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!--Hacemos que el ancho de la web sea para que ocupe todo el ancho del dispositivo.-->
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+</head>
+<body>
+	<!--Sirve para listar contenido,se puede realizar de varias formas, esta formado por un ul.list-group que es la raiz, y puede tener muchos hijos que llevan la clase li.list-item-->
+	<div class="container mt-5">
+		<div class="row justify-content-center">
+			<div class="col-md-5">
+				<!--Para hacer que no aparezcan bordes en las opciones se usa la clase list-group-flush en el elemento padre que contiene los items de la lista. Con active damos un color al item, y disabled hacemos que parezca mas apagado.
+					Si quieremos hacer que cuando pase el raton cambie el color de los elementos tengo que tener un div que sea padre de ul, que contiene los elementos de la lista.-->
+					<ul class="list-group list-group-flush">
+						<li class="list-group-item list-group-item-warning active">Opcion 1</li>
+						<li class="list-group-item list-group-item-success">Opcion 2</li>
+						<li class="list-group-item list-group-item-primary">Opcion 3</li>
+						<li class="list-group-item list-group-item-dark disabled">Opcion 4</li>
+						
+						<!--Esta parte es importante, este div debe contener a todos los enlaces que iran haciendo el cambio de color cuando pase el raton, sin tener que hacer click, en el href hacemos referencia al panel que queremos cambiar, con list-group-item-color hacemos que tenga ese color, y con list-group-item-action hacemos que se active el cambio de color-->
+						<div class="list-group mt-5">
+							<a href="#panel1" class="list-group-item list-group-item-warning list-group-item-action" data-toggle="list"> Enlace 1 </a>
+							<a href="#panel2" class="list-group-item list-group-item-success list-group-item-action" data-toggle="list"> Enlace 2 </a>
+							<a href="#panel3" class="list-group-item list-group-item-primary list-group-item-action" data-toggle="list"> Enlace 3 </a>
+							<a href="#panel4" class="list-group-item list-group-item-danger list-group-item-action" data-toggle="list"> Enlace 4 </a>
+						</ul>
+					</div>
+					
+					<!-- Formas de hacer que el supuesto panel vaya cambiando de contenido-->
+					<div class="col-md-8">
+						<!--Se necesita un div con la clase tab-content que abarca todos los paneles-->
+						<div class="tab-content">
+							<!--Dentro puedo tener todos los paneles que quiera, y tendre solo 1 panel activo, y mostrandose.
+								El resto de paneles no se activaran ni se mostraran.-->
+								<div class="tab-pane fade show active" id="panel1">
+									<h1>Contenido del panel 1</h1>
+								</div>
+
+								<div class="tab-pane fade" id="panel2">
+									<h1>Contenido del panel 2</h1>
+								</div>
+
+								<div class="tab-pane fade" id="panel3">
+									<h1>Contenido del panel 3</h1>
+								</div>
+
+								<div class="tab-pane fade" id="panel4">
+									<h1>Contenido del panel 4</h1>
+								</div>
+							</div>
+						</div>
+					</div>
+
+	<!--Funciones:
+    	.tab() Activa el funcionamiento de los paneles.
+    	.tab(‘show’) Muestra el panel asociado al elemento (por id o data-target).
+    	.tab(‘hide’) Oculta el panel asociado al elemento (por id o data-target).
+
+    	Eventos:
+		La interacción con este tipo de elementos genera 4 nuevos tipos de eventos:
+			hide.bs.tab: cuando se esconde el panel.
+    		show.bs.tab: cuando se muestra el panel.
+    		shown.bs.tab: cuando se acaba de mostrar el panel.
+    		hidden.bs.tab: cuando se acaba de ocultar el panel
+    	-->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

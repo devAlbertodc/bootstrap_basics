@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title> Pagina principal</title>
+	<!--Etiquetas meta:--->
+	<meta name="author content="Alberto Dasi">
+	<meta name="description" content="Aprendiendo bootstrap">
+	<meta charset="utf-8"> <!--Indicamos el lenguaje que se usa.-->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!--Hacemos que el ancho de la web sea para que ocupe todo el ancho del dispositivo.-->
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+</head>
+<body>
+	
+	<!--El componente collapse, permite hacer clic en un elemento y se muestre u oculten otro(s) elemento(s), se necesita elemento para interactuar y elemento sobre que afecta, haciendo un efecto de cortina.
+		No tiene arbol DOM porque solo esta formado por un componente
+	 	Este elemento tendra una referencia asignada al id del div que tendra el componente collapse.
+	 	Se puede hacer por medio de un enlace, o por medio de un boton.-->
+
+	 	<div class="container mt-lg-5">
+	 		<div class="row justify-content-center">
+	 			<div class="col-md-4">
+	 				<!-- En caso de un unico elemento, tendria un id y haria referencia con #id, al tener mas de uno, puedo hacer que usen la misma clase y referenciar a todos los elementos de la misma clase-->
+	 				<a href=".acolapsar" data-toggle="collapse" class="btn btn-success">
+	 					Enlace Mostrar/Ocultar
+	 				</a>
+
+	 				<button type="button" class="btn- btn-danger" data-toggle="collapse" data-target=".acolapsar">
+	 					Boton Mostrar/Ocultar
+	 				</button>
+	 				<!--Para que el componente funcione necesita tener un id asignado si solo va a haber un elemento.Si hay mas de un elemento se usan clases-->
+	 				<div class="collapse acolapsar">
+	 					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	 				</div>
+
+	 				<div class="collapse acolapsar">
+	 					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	 				</div>
+
+	 				<div class="collapse acolapsar">
+	 					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	 				</div>
+
+	 				<div class="collapse acolapsar">
+	 					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	 				</div>
+	 			</div>
+	 		</div>
+	 	</div>
+
+		<!--Este elemento tiene una serie de funciones y eventos asociados:
+
+		Funciones:
+		    .collapse(options) Habilita un elemento como colapsable. Para más información sobre las posibles opciones visitar el manual.
+    		.collapse(‘show’) Muestra los elementos seleccionados que tengan la clase collapse.
+    		.collapse(‘hide’) Oculta los elementos seleccionados que tengan la clase collapse.
+    		.collapse(‘toogle’) Cambio el estado de visibilidad los elementos seleccionados que tengan la clase collapse.
+    		.collapse(‘dispose’) Destruye el elemento colapsable. Deja de funcionar.
+
+		Eventos:
+	 		show.bs.collapse: cuando se muestra el componente collapse.
+		    shown.bs.collapse: cuando se acaba de mostrar el componente collapse.
+    		hide.bs.collapse: cuando se oculta el componente collapse.
+    		hidden.bs.collapse: cuando se acaba de ocultar el componente collapse
+    	-->
+
+    	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    	<!--Este script el inconveniente que tiene es que si hay 4 textos, se mostraran 4 alerts-->
+    	<script>
+    		$(function(){
+    			$(".collapse").on("hidden.bs.collapse", function(){
+    				alert("Texto ocultado");
+    			});
+    		});
+    	</script>
+    </body>
+    </html>

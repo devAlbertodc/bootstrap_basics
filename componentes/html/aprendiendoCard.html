@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title> Pagina principal</title>
+	<!--Etiquetas meta:--->
+	<meta name="author content="Alberto Dasi">
+	<meta name="description" content="Aprendiendo bootstrap">
+	<meta charset="utf-8"> <!--Indicamos el lenguaje que se usa.-->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!--Hacemos que el ancho de la web sea para que ocupe todo el ancho del dispositivo.-->
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+</head>
+<body>
+	<!--Componente card que sustituye a panel, wells y thumbnails de bootstrap3, siendo mas flexible y potente, encapsulando contenido.
+		.card
+			.img.card-img-top
+			.card-body
+				.card-title
+				.card-text
+	 LAS TARJETAS OCUPAN TODO EL ANCHO DE SU PADRE.
+	 SI TENGO ENLACES EN TITULO O SUBTITULO NECESITARE CLASE CARD-LINK
+	 NO TIENE EVENTOS NI FUNCIONES ASOCIADAS-->
+	<div class="container mt-5">
+		<div class="row justify-content-center">
+			<div class="col-md-4">
+				<!--Div que contiene todos los elementos que forman la tarjeta-->
+				<div class="card">
+					<div class="card-header bg-primary">
+						Cabecera
+					</div>
+					<img src="../img/imagen1.jpg" class="card-img-top">
+	
+					<!--Para poner un texto dentro de la imagen se usa esta clase: card-img-overlay-->
+					<div class="card-body">
+						<!--Titulo y subtitulo a continuacion-->	
+						<h3 class="card-title"> Ejemplo de card </h3>
+						<h6 class="card-subtitle mt-3"> Subtitulo de la imagen </h6>
+						<div class="card-text">	
+							Texto explicativo sobre la imagen
+						</div>
+					</div>
+
+					<div class="card-footer bg-success">
+						Pie de la imagen
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

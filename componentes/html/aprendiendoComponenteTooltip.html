@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title> Pagina principal</title>
+	<!--Etiquetas meta:--->
+	<meta name="author content="Alberto Dasi">
+	<meta name="description" content="Aprendiendo bootstrap">
+	<meta charset="utf-8"> <!--Indicamos el lenguaje que se usa.-->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!--Hacemos que el ancho de la web sea para que ocupe todo el ancho del dispositivo.-->
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+</head>
+<body>
+	
+	<!--El componente tooltip muestra texto de ayuda cuando el usuario pasa el raton por encima, cuya diferencia es que el usuario no tenga que hacer clic en un sitio de la pagina.
+		Con data-placement ubico donde se muestra el mensaje de ayuda.-->
+	<div class="btn btn-danger mt-5" 
+		data-toggle="tooltip" 
+		title="contenido del tooltip" 
+		data-placement="right"
+		data-content="hola"
+		data-html="true">
+		Muestra ayuda
+	</div>
+
+	<!--
+	Funciones asociadas
+	Las más importantes son:
+
+	    .tooltip(options) Habilita los tooltips. Para más información visitar el manual.
+	    .tooltip(‘show’) Muestra el bocadillo asociado a un elemento.
+	    .tooltip(‘hide’) Oculta el bocadillo asociado a un elemento.
+	    .tooltip(‘toogle’) Cambio el estado de visibilidad del bocadillo asociado a un elemento.
+	    .tooltip(‘dispose’) El popover deja de funcionar.
+	    .tooltip(‘enable’) Habilita el bocadillo asociado a un elemento
+	    .tooltip(‘disable’) Deshabilita el bocadillo asociado a un elemento.
+
+	Eventos asociados
+	La interacción con este tipo de elementos genera 5 nuevos tipos de eventos, bastante auto explicativos por su nombre y de los cuáles, para saber más detalles deberemos visitar el manual de referencia.
+	    show.bs.tooltip
+	    shown.bs.tooltip
+	    hide.bs.tooltip
+	    hidden.bs.tooltip
+	    inserted.bs.tooltip-->
+	
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<!--Si no funciona el script creado abajo, se introduce la siguiente expresion por consola web, que si que funciona:
+	$(".btn").tooltip("toggle");-->
+<script>
+	$(function(){
+		$(".btn").on("shown.bs.tooltip", function(){
+			alert("Mostrando ayuda");
+		});
+	});
+	</script>
+
+</body>
+</html>

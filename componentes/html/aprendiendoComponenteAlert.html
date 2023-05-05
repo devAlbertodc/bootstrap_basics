@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title> Pagina principal</title>
+	<!--Etiquetas meta:--->
+	<meta name="author content="Alberto Dasi">
+	<meta name="description" content="Aprendiendo bootstrap">
+	<meta charset="utf-8"> <!--Indicamos el lenguaje que se usa.-->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!--Hacemos que el ancho de la web sea para que ocupe todo el ancho del dispositivo.-->
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+</head>
+<body>
+	<!--Componente alert: sirve para avisar al usuario de que va a pasar algo.
+		Para que el aviso se pueda cerrar hay que poner alert-dismissible-->
+		<div class="alert alert-success alert-dismissible show fade">
+			<!-- Mostramos un mensaje y el enlace toma un color distinto para que se sepa que es un enlace. Toma de referencia el color del padre. -->
+			Esto es un mensaje de alerta <a href="" class="alert-link"> positivo </a>
+
+			<!--Para hacer que el alert se pueda cerrar se necesita un boton con un mensaje-->
+			<button type="button" class="close" data-dismiss="alert">
+				<span>X</span>
+			</button>
+		</div>	
+
+		<div class="alert alert-danger alert-dismissible show fade">
+			Esto es un mensaje de alerta <a href="" class="alert-link"> negativo </a>
+			<button class="close" type="button" data-dismiss="alert">
+				<span> Cerrar </span>
+			</button>
+		</div>	
+
+		<div class="alert alert-primary alert-dismissible show fade">
+			Esto es un mensaje de alerta <a href="" class="alert-link"> neutral </a>
+			<button type="button" class="close" data-dismiss="alert">
+				<span>Cerrar alerta</span>
+			</button>
+		</div>	
+
+		<!--Puedo además interaccionar con estos elementos alert mediante el uso de una serie de métodos:
+
+    $().alert(). Enlaza manejadores de click con los elementos hijo que tengan data-dismiss=”alert” para que al ahcer click sobre ellos desaparezcan los elementos seleccionados.
+    $().alert(‘close’). Cierra las alertas y las elimina del DOM.
+    $().alert(‘dispose’). XXXXXXX
+
+		Y los eventos asociados son:
+    		close.bs.alert que se dispara al cerrar la alerta.
+   			closed.bs.alert que se dispara cuando la alerta se está cerrando del todo.
+  -->
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<!--Tras el comentario anterior con este script puedo hacer que al cerrarse un aviso y generar este evento, pueda trabajar mostrando otro aviso-->
+  <script>
+		$(function(){
+			$(".alert").on("closed.bs.alert",function(){
+				alert("se ha cerrado");
+			});
+		});
+	</script>
+</body>
+</html>

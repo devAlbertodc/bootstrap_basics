@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  	<title> Pagina principal</title>
+
+	<!--Etiquetas meta:--->
+	<meta name="author content="Alberto Dasi">
+	<meta name="description" content="Aprendiendo bootstrap">
+    <meta charset="utf-8"> <!--Indicamos el lenguaje que se usa.-->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!--Hacemos que el ancho de la web sea para que ocupe todo el ancho del dispositivo.-->
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+  </head>
+  <body>
+  	
+  	<!--Empezamos usando un container para meter todo el contenido y que sea redimensionado en todo tipo de pantallas. Para hacer una lista desplegable hay que seguir un tipo de jerarquia.mt-5 indica que el margin-top es de 5-->
+  	<div class="container mt-5">
+  		<!--Dropdown es el padre de todo el menu y sus items. En primer lugar tendremos un div 
+  			que en su interior tendra una serie de opciones. En el menu, podemos hacer que el submenu se despliege hacia la derecha, arriba, debajo o izquierda
+  				dropright: los elementos aparecen a la derecha del menu
+  				dropleft: los elementos aparecen a la izquierda del menu
+  				dropup: los elementos aparecen arriba del menu. SOLO SI HAY ESPACIO SUFICIENTE.-->
+  		<div class="dropdown dropup mt-5">
+  			<!-- Btn lg hace que el boton sea mas grande-->
+  			<button type="button" class="btn btn-primary btn-lg dropdown-toggle" data-toggle="dropdown">
+  				Muestrame las opciones
+  			</button>
+			<!--Hay una propiedad que se llama dropdown-menu-(left/right) que sirve para indicar como quiero que se alineen las opciones:
+			dropdown-menu-left alinea las opciones a la izquierda.
+			dropdown-menu-right alinea las opciones a la derecha-->
+  			<div class="dropdown-menu dropdown-menu-right">
+  				<div class="dropdown-item"> Opcion 1 </div>
+  				<div class="dropdown-item"> Opcion 2 </div>
+  				<div class="dropdown-divider"> </div> <!--Para hacer un separador dentro de las opciones-->
+  				<div class="dropdown-item"> Opcion 3 </div>
+  			</div>
+  		</div>
+
+  		<!--Dropdown es el padre de todo el menu y sus items. En primer lugar tendremos un div 
+  			que en su interior tendra una serie de opciones-->
+  		<div class="dropdown">
+  			<!--En este caso el boton tendra un color distinto al indicar warning y btn-sm indica que es mas pequenyo, y toggle-split hace que la flecha
+  				aparezca mas separada.-->
+  			<button type="button" class="btn btn-warning btn-sm mt-5 dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">
+  				Muestrame las opciones
+  			</button>
+
+  			<div class="dropdown-menu">
+  				<div class="dropdown-item"> Opcion 1 </div>
+  				<div class="dropdown-item"> Opcion 2 </div>
+  				<div class="dropdown-item"> Opcion 3 </div>
+  			</div>
+  		</div>
+  	</div>
+
+  	<!--Los elementos mas importantes con los que se trabaja son:
+  		.dropdown('toggle') Cambia el estado del dropdown de un elemento de navegacion
+  		.dropdown('update') Actualiza la posicion de un elemento
+  		.dropdown('dispose') Destruye el componente.
+
+  		Show.bs.dropdown: se realiza cuando se muestra la lista desplegable.
+  		Shown.bs.dropdown: se realiza cuando se cierra la lista desplegable.
+  		hide.bs.dropdown: se realiza cuando se oculta la lista desplegable.
+  		hidden.bs.dropdown: se realiza cuando se acaba de ocultar la list--->
+  </body>
+  	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+	<script>
+		/*$(function(){
+			$(".dropdown").on("shown.bs.dropdown", function(){
+				alert("Menu mostrado");
+			});
+
+			$(".dropdown").on("hidden.bs.dropdown", function(){
+				alert("Menu ocultado");
+			});
+		});*/
+	</script>
+</html>

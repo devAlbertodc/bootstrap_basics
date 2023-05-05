@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title> Pagina principal</title>
+	<!--Etiquetas meta:--->
+	<meta name="author content="Alberto Dasi">
+	<meta name="description" content="Aprendiendo bootstrap">
+	<meta charset="utf-8"> <!--Indicamos el lenguaje que se usa.-->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!--Hacemos que el ancho de la web sea para que ocupe todo el ancho del dispositivo.-->
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+</head>
+<body>
+	<!--InputGroup componente que permite extender controles de formularios y anyadir funciones y addons con botones a ambos lados de los campos de los formularios y agregar addons-->
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-md-4">
+				<form>
+					<label>Tu pagina personal</label>
+					<div class="input-group input-group-lg">
+						<div class="input-group-prepend">
+							<span class="input-group-text">http://www.mysite.edu</span>
+						</div>
+
+						<input type="text" class="form-control" placeholder="Tu nombre de usuario" width="30%">
+
+						<div class="input-group-append">
+							<span class="input-group-text">/site</span>
+						</div>
+					</div>
+
+					<label>Input con Radio</label>
+					<div class="input-group input-group-lg">
+						<div class="input-group-prepend">
+							<div class="input-group-text">
+								<input type="radio" />
+							</div>
+						</div>
+						<input type="text" class="form-control" placeholder="Campo de texto asociado al radio">    
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

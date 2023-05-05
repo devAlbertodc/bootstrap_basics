@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  	<title> Pagina principal</title>
+
+	   <!--Etiquetas meta:--->
+	   <meta name="author content="Alberto Dasi">
+	   <meta name="description" content="Aprendiendo bootstrap">
+    <meta charset="utf-8"> <!--Indicamos el lenguaje que se usa.-->
+  	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  	<!--Hacemos que el ancho de la web sea para que ocupe todo el ancho del dispositivo.-->
+  	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+  </head>
+  <body>
+
+<!--En primer lugar, abarcamos toda la barra de navegacion en una etiqueta div-->
+  	<div class="container">
+
+      <!--Creamos la lista de elementos, en este caso sin ordenar.
+        Se puede hacer que toda la lista tenga un fondo negro agregando a la ul: ul class="nav bg-dark-->
+      <ul class="nav bg-dark">
+        <!--Para cada elemento de la lista ponemos items ordenados-->
+        <li class="nav-item">
+          <!--Dentro de cada item ponemos un enlace y en href referenciamos a que web vamos a pasar.-->
+          <a href="#" class="nav-link active"> Inicio</a>
+        </li>
+
+        <li class="nav-item">
+          <a href="#" class="nav-link"> Noticias</a>
+        </li>
+
+        <li class="nav-item">
+          <a href="#" class="nav-link"> Contacto</a>
+        </li>
+
+        <li class="nav-item">
+          <a href="#" class="nav-link"> Sobre nosotros</a>
+        </li>
+      </ul>
+
+      <!-- Si no tenemos pasos intermedios se puede hacer de esta forma.
+      Si queremos el fondo amarillo hay que agregar bg-warning-->
+      <nav class="nav mt-5 nav-tabs">
+        <a href="#" class="nav-link active"> Inicio </a>
+        <a href="#" class="nav-link"> Noticias </a>
+        <a href="#" class="nav-link"> Contacto </a>
+        <a href="#" class="nav-link"> Sobre Nosotros </a>
+      </nav>
+
+      <!--Se puede cambiar el fondo del enlace con la palabra active en el class-->
+      <nav class="nav mt-5 mb-2 nav-pills">
+        <a href="#" class="nav-link active show"> Inicio </a>
+        <a href="#" class="nav-link"> Noticias </a>
+        <a href="#" class="nav-link"> Contacto </a>
+        <a href="#" class="nav-link"> Sobre Nosotros </a>
+      </nav>
+
+      <nav class="nav nav-tabs">
+        <a href="#inicio" class="nav-link active" data-toggle="tab"> Inicio </a>
+        <a href="#novedades" class="nav-link" data-toggle="tab"> Noticias </a>
+        <a href="#nosotros" class="nav-link" data-toggle="tab"> Contacto </a>
+        <a href="#contacto" class="nav-link" data-toggle="tab"> Sobre Nosotros </a>
+      </nav>
+
+      <div class="tab-content">
+        <div class="tab-pane fade show active" id="inicio"> Contenido de inicio </div>
+        <div class="tab-pane fade" id="novedades">Contenido de novedades</div>
+        <div class="tab-pane fade" id="nosotros"> Contenido del Panel Nosotros </div>
+        <div class="tab-pane fade" id="contacto"> Contenido del Panel Contacto </div>
+      </div>
+    </div>
+
+    <!--Funciones asociadas:
+      .tab() Activa una pestaña, Debe tener el atributo data-target o el href correcto
+      .tab('show') Dada una pestaña muestra el panel asociado.
+      .tab('dispose') Destruye el componente y deja de funcionar como tal.
+
+      Eventos asociados:
+      La interaccion con estos elementos disparan 4 eventos:
+      -side.bs.tab: se activa cuando se oculta el tab.
+      -show.bs.tab:
+      -hidden.bs.tab: se activa cuando acaba de ocultarse.
+      -shown.bs.tab: se activa cuando se acaba de mostrar.-->
+  		
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <script>
+      $(function(){
+        $("nav").on("hidden.bs.tab", function(){
+          alert("Pestanya oculta");
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title> Pagina principal</title>
+	<!--Etiquetas meta:--->
+	<meta name="author content="Alberto Dasi">
+	<meta name="description" content="Aprendiendo bootstrap">
+	<meta charset="utf-8"> <!--Indicamos el lenguaje que se usa.-->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!--Hacemos que el ancho de la web sea para que ocupe todo el ancho del dispositivo.-->
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+</head>
+<body>
+	
+	<!--El componente popover permite visualizar un bocadillo que proporciona informacion con un titulo y una descripcion al pulsar un boton y se puede ubicar el bocadillo en cualquier posicion respecto al div con la propiedad data-placement. Si no ubiese espacio donde se le indica lo mostraria donde hubiese sitio-->
+	<div class="btn btn-success mt-5" 
+	data-toggle="popover" 
+	title="Titulo del bocadillo" 
+	data-content="explicacion del elemento"
+	data-placement="bottom">
+	Muestra el bocadillo
+</div>
+
+	<!--Funciones asociadas
+		Las más importantes son:
+	    .popover(options) Habilita los popovers. Para más información visitar el manual.
+	    .popover(‘show’) Muestra el bocadillo asociado a un elemento.
+	    .popover(‘hide’) Oculta el bocadillo asociado a un elemento.
+	    .popover(‘toogle’) Cambio el estado de visibilidad del bocadillo asociado a un elemento.
+	    .popover(‘dispose’) El popover deja de funcionar.
+	    .popover(‘enable’) Habilita el bocadillo asociado a un elemento
+	    .popover(‘disable’) Deshabilita el bocadillo asociado a un elemento.-->
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<script>
+	$(function(){
+		$('.btn').popover({
+			container:'body'
+		});
+
+	$('.btn').on("hidden.bs.popover", function(){
+		alert("Bocadillo oculto");
+		});
+	});
+</script>
+</body>
+</html>

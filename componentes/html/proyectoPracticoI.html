@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title> Pagina principal</title>
+	<!--Etiquetas meta:--->
+	<meta name="author content="Alberto Dasi">
+	<meta name="description" content="Aprendiendo bootstrap">
+	<meta charset="utf-8"> <!--Indicamos el lenguaje que se usa.-->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!--Hacemos que el ancho de la web sea para que ocupe todo el ancho del dispositivo.-->
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+</head>
+<body>
+
+	<!--Ponemos todo el contenido en una etiqueta main.-->
+	<main class="container-fluid">
+
+		<!-- Trabajando con el componente alerta:
+			alert-dismissible: Se le indica que se pueda cerrar.
+			Fade: haga un efecto de desvanecimiento.
+			alert-warning para el color de fondo.
+			fixed-bottom para ubicarlo en la parte inferior de la web-->
+			<div class="alert alert-dismissible fade show alert-warning fixed-bottom">
+				¿Aviso de Cookies, me has leido?
+				<button type="button" class="close" data-dismiss="alert"> X </button>
+			</div>
+
+			<!--La parte superior de la web la metemos en un header-->
+			<header class="row">
+				<!--En la parte superior vamos a meter una barra de navegacion pequeña que se expande y tendra color oscuro y ocupara toda la parte superior-->
+				<nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+					<a class="navbar-brand" href="#"><img src="../img/logoWeb.png"></a>
+					<!--Boton para mostrar u ocultar el menu cuando no cabe en la pagina.-->
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+
+					<div class="navbar-collapse" id="menu">
+						<ul class="navbar-nav">
+							<li class="nav-item active">
+								<a href="#" class="nav-link dropdown-toggle"> Inicio</a>
+							</li>
+
+							<li class="nav-item dropdown" >
+								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"> Noticias</a>
+								<div class="dropdown-menu">
+									<a class="dropdown-item" href="#"> Ultimas noticias </a>
+									<a class="dropdown-item" href="#"> Noticias destacadas </a>
+								</div>
+							</li>
+
+							<li class="nav-item dropdown">
+								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"> Nosotros</a>
+								<div class="dropdown-menu">
+									<a class="dropdown-item" href="#"> La empresa </a>
+									<a class="dropdown-item" href="#"> Trabaja con nosotros</a>
+								</div>
+							</li>
+
+							<li class="nav-item dropdown">
+								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"> Contacto</a>
+								<div class="dropdown-menu">
+									<a class="dropdown-item" href="#"> ¿Donde estamos? </a>
+									<a class="dropdown-item" href="#"> Servicio al cliente</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+
+
+					<!--Codigo ubicado para la parte de los botones de la parte superior a la derecha, se le da un margen, y se le pone un id para que afecte al elemento que tenga un id que se llame #entrar-->
+					<form class="form-inline">
+						<input class="btn-primary btn-sm mr-2 float-right" data-toggle="modal" data-target="#entrar" type="button" value="Login"></button>
+						<input class="btn-primary btn-sm mr-2" data-toggle="modal" data-target="#registro" type="button" value="Registro"></button>
+					</form>
+				</nav>
+			</header>
+
+			<!-- CARRUSEL -->
+			<section class="row justify-content-center mt-5">
+				<div class="col-md-9 mt-3">
+					<div class="carousel slide" id="carrusel" data-ride="carousel">
+						<div class="carousel-inner">
+							<div class="carousel-item active">
+								<img class="w-100 d-block" src="../img/imagen1.jpg" alt="Primer elemento">
+							</div>
+
+							<div class="carousel-item">
+								<img class="w-100 d-block" src="../img/imagen2.jpg" alt="Segundo elemento">
+							</div>
+
+							<div class="carousel-item">
+								<img class="w-100 d-block" src="../img/imagen3.jpg" alt="Tercer elemento">
+							</div>
+
+							<div class="carousel-item">
+								<img class="w-100 d-block" src="../img/imagen4.jpg" alt="Cuarto elemento">
+							</div>
+						</div>
+
+						<!-- Opciones mediante enlaces de ir a la imagen anterior o la posterior-->
+						<a class="carousel-control-prev" href="#carrusel" data-slide="prev">
+							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							<span class="sr-only">Anterior</span>
+						</a>
+
+						<a class="carousel-control-next" href="#carrusel" data-slide="next">
+							<span class="carousel-control-next-icon"></span>
+							<span class="sr-only">Posterior</span>
+						</a>
+
+						<!--Importante indicar una imagen activa, sin imagen activa no funciona el carousel.-->
+						<ol class="carousel-indicators">
+							<li data-target="#carrusel" data-slide-to="0" class="active"></li>
+							<li data-target="#carrusel" data-slide-to="1"></li>
+							<li data-target="#carrusel" data-slide-to="2"></li>
+							<li data-target="#carrusel" data-slide-to="3"></li>
+						</ol>
+					</div>
+				</div>
+			</section>
+
+			<section class="row bg-dark justify-content-center mt-5 mb-3">
+				<h1 class="text-center text-white">Cursos ofertados</h1>
+			</section>
+
+			<section class="row justify-content-center">
+				<div class="col-sm-4">
+					<!--Div que contiene todos los elementos que forman la tarjeta-->
+					<div class="card">
+						<div class="card-header bg-primary">
+							Cabecera del gato de la izquierda
+						</div>
+						<img src="../img/imagen1.jpg" class="card-img-top">
+
+						<!--Para poner un texto dentro de la imagen se usa esta clase: card-img-overlay-->
+						<div class="card-body">
+							<!--Titulo y subtitulo a continuacion-->	
+							<h3 class="card-title"> Titulo de la imagen del primer gato</h3>
+							<h6 class="card-subtitle mt-3"> Subtitulo de la imagen del primer gato</h6>
+							<div class="card-text">Texto explicativo sobre el gato</div>
+						</div>
+
+						<div class="card-footer bg-success">
+							Pie de la imagen
+						</div>
+					</div>
+
+					<div class="col-sm-3">
+						<div class="card">
+							<div class="card-header bg-primary">
+								Cabecera del gato de la izquierda
+							</div>
+							<img src="../img/imagen1.jpg" class="card-img-top">
+
+							<!--Para poner un texto dentro de la imagen se usa esta clase: card-img-overlay-->
+							<div class="card-body">
+								<!--Titulo y subtitulo a continuacion-->	
+								<h3 class="card-title"> Titulo de la imagen del primer gato</h3>
+								<h6 class="card-subtitle mb-3"> Subtitulo de la imagen del primer gato</h6>
+								<div class="card-text">	
+									Texto explicativo sobre el gato
+								</div>
+							</div>
+
+							<div class="card-footer bg-success">
+								Pie de la imagen
+							</div>
+						</div>
+					</div>
+
+					<div class="col-sm-3">
+						<div class="card">
+							<div class="card-header bg-primary">
+								Cabecera del gato de la izquierda
+							</div>
+							<img src="../img/imagen1.jpg" class="card-img-top">
+
+							<!--Para poner un texto dentro de la imagen se usa esta clase: card-img-overlay-->
+							<div class="card-body">
+								<!--Titulo y subtitulo a continuacion-->	
+								<h3 class="card-title"> Titulo de la imagen del primer gato</h3>
+								<h6 class="card-subtitle mb-3"> Subtitulo de la imagen del primer gato</h6>
+								<div class="card-text">	
+									Texto explicativo sobre el gato
+								</div>
+							</div>
+
+							<div class="card-footer bg-success">
+								Pie de la imagen
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="row bg-dark justify-content-center mt-3 mb-3">
+				<h1 class="text-center text-white">Quieres hablar con nosotros</h1>
+			</section>
+
+			<!--Definir las ventanas modales-->
+			<section class="modal" id="entrar">
+				<!--Crear la ventana modal y que aparezca centrada, recordar que antes de poner el encabezado/parte media o pie de pagina modal, se debe poner modal content-->
+				<div class="modal-dialog modal-dialog-centered">
+					<div class="modal-content">
+						<div class="modal-header bg-primary text-white">
+							<div class="modal-title">
+								Entrar en sesion
+							</div>
+							<span data-dismiss="modal">X</span>
+						</div>
+
+						<!-- Hacemos el formulario de registro que va a ocupar toda la ventana modal-->
+						<form>
+							<div class="modal-body">
+								<div class="form-group">
+									<label>E-Mail: </label>
+									<input type="email" class="form-control" placeholder="Introduce email">
+								</div>
+
+								<div class="form-group">
+									<label> Contrasenya: </label>
+									<input type="password" class="form-control" placeholder="Introduce contrasenya">
+								</div>
+							</div>
+
+							<div class="modal-footer">
+								<input type="submit" class="btn btn-primary" value="Registrarse">
+							</div>
+						</form>
+					</div>
+				</div>
+			</section>
+
+			<section class="modal" id="registro">
+				<!--Crear la ventana modal y que aparezca centrada, recordar que antes de poner el encabezado/parte media o pie de pagina modal, se debe poner modal content-->
+				<div class="modal-dialog modal-dialog-centered">
+					<div class="modal-content">
+						<div class="modal-header bg-primary text-white">
+							<div class="modal-title">
+								Registro de Nuevo Usuario
+							</div>
+							<span data-dismiss="modal">X</span>
+						</div>
+						
+						<!--Formulario para registrar un usuario-->
+						<form>
+							<div class="modal-body">
+								<div class="form-group">
+									<label>Nombre</label>
+									<input type="text" class="form-control" placeholder="Introduce nombre" required>
+								</div>
+								
+								<div class="form-group">
+									<label>Apellidos</label>
+									<input type="text" class="form-control" placeholder="Introduce los apellidos">
+								</div>
+
+								<div class="form-group">
+									<label>Correo electronico</label>
+									<input type="email" class="form-control" placeholder="Introduce tu email">
+								</div>
+
+								<div class="form-group">
+									<label>Contrasenya</label>
+									<input type="password" class="form-control" placeholder="Introduce tu contrasenya" required>
+								</div>
+
+								<!--Grupo de botones donde solo se puede seleccionar una opcion, esta opcion se hace simulando botones que no lo son.-->
+								<div class="form-group">
+									<label>Genero</label>
+									<div class="btn btn-group btn-group-toggle" data-toggle="buttons">
+
+										<label class="btn btn-warning">
+											<input type="radio" name="genero" id="V" >Hombre
+										</label>
+
+										<label class="btn btn-warning">
+											<input type="radio" name="genero" id="M">Mujer
+										</label>
+									</div>
+								</div>
+							</div>
+
+							<div class="modal-footer">
+								<input type="submit" class="btn btn-primary" value="Registrar">
+							</div>
+						</form>
+					</div>
+				</div>
+			</section>
+
+			<section class="row bg-dark justify-content-center mt-3 mb-3">
+				<h1 class="text-center text-white">Alberto Dasi. Todos los derechos reservados</h1>
+			</section>
+		</main>	
+
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+		<!-- SCRIPT PARA QUE FUNCIONEN DETERMINADOS COMPONENTES -->
+		<script>
+			$(function () {
+            //Habilita los tooltips
+            $('[data-toggle="tooltip"]').tooltip({
+            	container: 'body'
+            });
+        });
+    </script>
+</body>
+</html>

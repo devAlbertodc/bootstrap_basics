@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title> Pagina principal</title>
+	<!--Etiquetas meta:--->
+	<meta name="author content="Alberto Dasi">
+	<meta name="description" content="Aprendiendo bootstrap">
+	<meta charset="utf-8"> <!--Indicamos el lenguaje que se usa.-->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!--Hacemos que el ancho de la web sea para que ocupe todo el ancho del dispositivo.-->
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+</head>
+<body>
+	<!--Botones:
+		Los botones pueden ponerse en enlaces y mediante clases hacer que no parezca un enlace.
+		Mediante input, que seria como un boton de un formulario.
+		Como un propio boton, usando la etiqueta button.
+		Usando btn-sm o btn-lg hacemos que el boton cambie de tamanyo.
+		Usando btn-outline-color hacemos que el color solo se aplique al borde del boton.
+
+		Para complicarlo se puede seguir la siguiente estructura:
+		.btn-group .btn-toggle como padres
+			label.btn como hijos
+				input como hijos de label.btn-->
+	<a class="btn btn-danger btn-sm ml-5" href="#">Boton con enlace</a>
+	<a class="btn btn-dark btn-lg" href="#">Boton con enlace</a>
+	<input class="btn btn-primary" type="button" value="Boton con input">
+	<input class="btn btn-outline-secondary" type="button" value="Boton con input">
+	<button class="btn btn-success">Boton con button</button>
+
+	<div class="btn-group btn-group-toggle mt-5 ml-5" data-toggle="button">
+	
+		<label class="btn btn-primary active">
+			<input type="radio" name="opciones" id="opcionA"> Opcion A 
+		 </label>
+
+		<label class="btn btn-secondary">
+			<input type="radio" name="opciones" id="opcionB"> Opcion B
+		 </label>
+
+		 <label class="btn btn-danger">
+			<input type="radio" name="opciones" id="opcionC"> Opcion C 
+		 </label>
+
+		 <label class="btn btn-success">
+			<input type="radio" name="opciones" id="opcionD"> Opcion D 
+		 </label>
+
+		 <label class="btn btn-dark">
+			<input type="radio" name="opciones" id="opcionE"> Opcion E
+		 </label>
+	</div>
+
+	<div class="btn-toolbar mt-5 ml-5">
+		<div class="btn-group">
+			<button type="button" class="btn btn-primary">1.1</button>
+			<button type="button" class="btn btn-primary">1.2</button>
+			<button type="button" class="btn btn-primary">1.3</button>
+
+		</div>
+
+		<div class="btn-group">
+			<button type="button" class="btn btn-info">2.1</button>
+			<button type="button" class="btn btn-info">2.2</button>
+			<button type="button" class="btn btn-info">2.3</button>
+
+		</div>
+
+		<div class="btn-group">
+			<button type="button" class="btn btn-danger">3.1</button>
+			<button type="button" class="btn btn-danger">3.2</button>
+			<button type="button" class="btn btn-danger">3.3</button>
+
+		</div>
+	</div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

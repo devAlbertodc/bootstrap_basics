@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title> Pagina principal</title>
+	<!--Etiquetas meta:--->
+	<meta name="author content="Alberto Dasi">
+	<meta name="description" content="Aprendiendo bootstrap">
+	<meta charset="utf-8"> <!--Indicamos el lenguaje que se usa.-->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!--Hacemos que el ancho de la web sea para que ocupe todo el ancho del dispositivo.-->
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+</head>
+<body>
+
+	<!--En primer lugar, abarcamos toda la barra de navegacion en una etiqueta div-->
+	<div class="container">
+		<!--En este caso se hara un menu de navegacion-->
+		<nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+			<!--Dentro de la barra de navegacion metemos un enlace y ese enlace tendra una imagen, de forma que la imagen cuando se clique podria redireccionar a otra web-->
+			<a class="navbar-brand" href="#"><img src="../img/logoWeb.png"></a>
+			<!--Este boton va a servir para colapsar el menu cuando ya no quepa en la pantalla. Indicamos que va a servir para la barra de navegacion, sera un boton que colapsara la informacion y afectara al elemento que sea #menu.
+			Si la pantalla es bastante grande como para mostrar el menu, no se mostrara.
+			En pantallas de movil aparecera algo similar a un hamburguer menu-->
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<!--Ponemos un texto de ayuda para guiar al usuario-->
+			<span class="navbar-text text-white">Aprende Bootstrap</span>
+			
+			<!--Este menu tendra el id que hemos referenciado al boton y que ira haciendo que cambie de aspecto-->
+			<div class="collapse navbar-collapse" id="menu">
+				<nav class="navbar-nav">
+					<a class="nav-link" href="#">Inicio</a>
+					<a class="nav-link" href="#">Novedades</a>
+					<a class="nav-link" href="#">Nosotros</a>
+					<a class="nav-link" href="#">Contacto</a>
+				</nav>
+			</div>
+
+			<!-- Despues de poner la barra de navegacion pondremos un formulario:-->
+			<form class="form-inline"> 
+				<input class="form-control form-control-sm mr-md2" type="search" placeholder="Buscar"/>
+				<input class="boton btn-primary" type="submit" text="a"/>
+			</form>
+		</nav>  	
+	</div>	
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

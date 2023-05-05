@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title> Pagina principal</title>
+	<!--Etiquetas meta:--->
+	<meta name="author content="Alberto Dasi">
+	<meta name="description" content="Aprendiendo bootstrap">
+	<meta charset="utf-8"> <!--Indicamos el lenguaje que se usa.-->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!--Hacemos que el ancho de la web sea para que ocupe todo el ancho del dispositivo.-->
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+
+	<style>
+	.ejemploScroll{
+		height:200px;
+		overflow:auto;
+	}
+</style>
+</head>
+<body>
+	
+	<!--El componente scrollSpy tiene muchos componentes de los cuales puede depender, por lo tanto es de los mas complejos. Puedes ir con la barra lateral ir bajando una seccion y hacer que otra seccion pase a ser la activa.-->
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-md-3">
+				<ul class="list-group" id="navegacion">
+					<li class="list-group-item active" data-target="#sec1"> Seccion1</li>
+					<li class="list-group-item" data-target="#sec2"> Seccion2</li>
+					<li class="list-group-item" data-target="#sec3"> Seccion3</li>
+					<li class="list-group-item" data-target="#sec4"> Seccion4</li>
+				</ul>
+			</div>
+
+			<!--Le decimos al div que contiene a todas las secciones que ira relacionado con las secciones que forman parte de la lista ul.-->
+			<div class="col-md-4 ejemploScroll" data-spy="scroll" data-target="#navegacion" data-offset="0">
+				<h1 id="sec1">Seccion 1</h1>
+				<p>LoremOccaecat mollit enim non ullamco sunt exercitation et sit labore. Cillum elit magna voluptate sunt deserunt est irure. Nostrud commodo exercitation dolore enim voluptate sit laborum laboris aute. Id laborum anim irure sint consectetur
+				ullamco ullamco irure qui minim ea. Exercitation sint ut ex magna culpa elit duis officia ad sit. Deserunt exercitation tempor quis ut. Exercitation eu aliqua labore magna duis esse in elit ullamco qui est quis ut proident</p>
+
+				<h1 id="sec2">Seccion 2</h1>
+				<p>LoremOccaecat mollit enim non ullamco sunt exercitation et sit labore. Cillum elit magna voluptate sunt deserunt est irure. Nostrud commodo exercitation dolore enim voluptate sit laborum laboris aute. Id laborum anim irure sint consectetur
+				ullamco ullamco irure qui minim ea. Exercitation sint ut ex magna culpa elit duis officia ad sit. Deserunt exercitation tempor quis ut. Exercitation eu aliqua labore magna duis esse in elit ullamco qui est quis ut proident</p>
+
+				<h1 id="sec3">Seccion 3</h1>
+				<p>LoremOccaecat mollit enim non ullamco sunt exercitation et sit labore. Cillum elit magna voluptate sunt deserunt est irure. Nostrud commodo exercitation dolore enim voluptate sit laborum laboris aute. Id laborum anim irure sint consectetur
+				ullamco ullamco irure qui minim ea. Exercitation sint ut ex magna culpa elit duis officia ad sit. Deserunt exercitation tempor quis ut. Exercitation eu aliqua labore magna duis esse in elit ullamco qui est quis ut proident</p>
+
+				<h1 id="sec4">Seccion 4</h1>
+				<p>LoremOccaecat mollit enim non ullamco sunt exercitation et sit labore. Cillum elit magna voluptate sunt deserunt est irure. Nostrud commodo exercitation dolore enim voluptate sit laborum laboris aute. Id laborum anim irure sint consectetur
+				ullamco ullamco irure qui minim ea. Exercitation sint ut ex magna culpa elit duis officia ad sit. Deserunt exercitation tempor quis ut. Exercitation eu aliqua labore magna duis esse in elit ullamco qui est quis ut proident</p>
+			</div>
+		</div>
+	</div>
+	<!--Funciones asociadas
+    	.scrollspy({target: “#idnavegación”}) Habilita el componente para ese elemento de navegación que hemos identificado mediante un ID.
+    	.scrollspy(‘refresh’) Si añado/quito elementos al DOM para que siga funcionando el componente tengo que hacer recargar usando este método.
+    	.scrollspy(‘dispose’) Destruye el componente ScrollSpy. Deja de funcionar.
+
+	Eventos asociados.
+		La interacción con este tipo de elementos genera 1 tipo de eventoPara saber más detalles deberemos visitar el manual de referencia.
+			activate.bs.scrollspy -->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+	</body>
+	</html>

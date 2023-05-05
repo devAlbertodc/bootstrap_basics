@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title> Pagina principal</title>
+	<!--Etiquetas meta:--->
+	<meta name="author content="Alberto Dasi">
+	<meta name="description" content="Aprendiendo bootstrap">
+	<meta charset="utf-8"> <!--Indicamos el lenguaje que se usa.-->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!--Hacemos que el ancho de la web sea para que ocupe todo el ancho del dispositivo.-->
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+</head>
+<body>
+	
+	<!--El componente modal muestra dialogos en la web, y el usuario centra su atencion en el dialogo, y hasta que no se rellena no puedes volver al contenido de la web. La ventana modal puede tener encabezado con un titulo, un cuerpo y un pie de pagina dentro del dialogo que se muestra.
+		Si queremos que desvanezca usamos la clase fade-->
+	<div class="modal fade" id="ventana">
+		<div class="modal-dialog modal-lg modal-dialog-centered"> <!--Hacemos que el dialogo aparezca en el centro de la pantalla y con mas ancho-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<div class="modal-title">
+						Titulo de la ventana modal
+						
+						<div class="text-right">
+							<span data-dismiss="modal"> X </span>
+						</div>
+					</div>
+				</div>
+				<div class="modal-body">
+					Cuerpo de la ventana modal
+				</div>
+				<div class="modal-footer">
+					Pie de la ventana modal
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Cuando se pulsa el boton se muestra la ventana modal. Indicamos con data-target: #id elemento-->
+	<button class="btn btn-primary" data-toggle="modal" data-target="#ventana">
+		Muestra el dialogo modal
+	</button>
+
+	<!--Funciones asociadas
+		Las más importantes son:
+		    .modal(options) Habilita los tooltips. Para más opciones visitar el manual.
+		    .modal(‘show’) Muestra el bocadillo asociado a un elemento.
+		    .modal(‘hide’) Oculta el bocadillo asociado a un elemento.
+		    .modal(‘toogle’) Cambio el estado de visibilidad del bocadillo asociado a un elemento.
+
+		Eventos asociados:
+		La interacción con este tipo de elementos genera 4 nuevos tipos de eventos, bastante explicativos por su nombre,para saber más visitar manual referencia.
+		    show.bs.modal: Cuando se muestra la ventana modal.
+		    shown.bs.modal: Cuando se acaba de mostrar la ventana modal.
+		    hide.bs.modal: Cuando se quita la ventana modal.
+		    hidden.bs.modal: Cuando se acaba de quitar la ventana modal.-->
+	
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<script>
+	$(function(){
+		$(".modal").on("hide.bs.modal",function(){
+			alert("Dialogo ocultado")
+		});
+	});
+</script>
+</body>
+</html>

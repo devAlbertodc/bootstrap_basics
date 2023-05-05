@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title> Pagina principal</title>
+	<!--Etiquetas meta:--->
+	<meta name="author content="Alberto Dasi">
+	<meta name="description" content="Aprendiendo bootstrap">
+	<meta charset="utf-8"> <!--Indicamos el lenguaje que se usa.-->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!--Hacemos que el ancho de la web sea para que ocupe todo el ancho del dispositivo.-->
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+</head>
+<body>
+	
+	<!--El componente progress, es una barra y sirve para crear barras de progreso.
+		Debe tener un elemento llamado progress y sus hijos son progress-bar, que pueden haber varios.
+		Esta clase no tiene eventos ni funciones asociadas.-->
+	<div class="container">
+		<!-- Al elemento progress se le pone altura, y a elementos progress-bar se le pone anchura.-->
+		<div class="progress bg-danger" style="height: 30px">
+			<!-- A los elementos que tengan la clase progress bar se le puede hacer que aparezca una parte rallada con la siguiente clase progress-bar-striped.
+				Si quiero que la barra tenga tambien animacion hay que conservar la clase striped y agregar la clase progress-bar-animated-->
+			<div class="progress-bar bg-dark progress-bar-animated progress-bar-striped" style="width: 40%">
+				40%
+			</div>
+
+			<div class="progress-bar bg-warning progress-bar-animated progress-bar-striped" style="width: 40%">
+				40%
+			</div>
+
+			<div class="progress-bar bg-primary progress-bar-animated progress-bar-striped" style="width: 20%">
+				20%
+			</div>
+
+			<div class="progress-bar bg-secondary progress-bar-animated progress-bar-striped" style="width: 10%">
+				10%
+			</div>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>

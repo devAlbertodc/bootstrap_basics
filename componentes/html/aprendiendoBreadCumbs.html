@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title> Pagina principal</title>
+	<!--Etiquetas meta:--->
+	<meta name="author content="Alberto Dasi">
+	<meta name="description" content="Aprendiendo bootstrap">
+	<meta charset="utf-8"> <!--Indicamos el lenguaje que se usa.-->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!--Hacemos que el ancho de la web sea para que ocupe todo el ancho del dispositivo.-->
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+</head>
+<body>
+
+	<!--En primer lugar, abarcamos toda la barra de navegacion en una etiqueta div-->
+	<div class="container">
+		<!--En este caso el elemento breadCrumb es un indicador que muestra en que web estas, mostrando algo similar a una ruta.-->
+		<div class="breadcrumb">
+			<!--En el interior del breadcrumb ponemos la serie de opciones.-->
+			<div class="breadcrumb-item"> Inicio</div>
+			<div class="breadcrumb-item"> Noticias </div>
+			<div class="breadcrumb-item active"> Ultimas noticias</div>
+			
+			<!--De esta forma podemos hacer un enlace que nos lleve a otra web nuestra o externa-->
+			<div class="breadcrumb-item">
+				<a href="https://www.google.com/"> Visitar google</a>
+			</div>
+		</div>
+	</div>	
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
